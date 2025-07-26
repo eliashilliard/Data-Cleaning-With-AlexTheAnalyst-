@@ -13,9 +13,8 @@ from layoffs
 
 -- Creating a duplicate table to avoid making changes to the raw data  
 
-select * into layoffs_staging
-from layoffs
-where 1 = 0
+create table layoffs_staging 
+like layoffs
 
 select * 
 from layoffs_staging
